@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-lg fixed-top" 
+     [class.scrolled]="isScrolled">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#hero" (click)="scrollToSection('hero', $event)">
+      <span class="brand-icon">HJ</span>
+      <span class="brand-text">Hassan Jlassi</span>
+    </a>
+    
+    <button class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav"
+            (click)="toggleMobileMenu()"
+            [attr.aria-expanded]="isMobileMenuOpen">
+      <span class="toggler-line"></span>
+      <span class="toggler-line"></span>
+      <span class="toggler-line"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item" [class.active]="isActive('hero')">
+          <a class="nav-link" href="#hero" (click)="scrollToSection('hero', $event)">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="nav-item" [class.active]="isActive('about')">
+          <a class="nav-link" href="#about" (click)="scrollToSection('about', $event)">
+            <i class="fas fa-user"></i>
+            <span>About</span>
+          </a>
+        </li>
+        <li class="nav-item" [class.active]="isActive('skills')">
+          <a class="nav-link" href="#skills" (click)="scrollToSection('skills', $event)">
+            <i class="fas fa-code"></i>
+            <span>Skills</span>
+          </a>
+        </li>
+        <li class="nav-item" [class.active]="isActive('projects')">
+          <a class="nav-link" href="#projects" (click)="scrollToSection('projects', $event)">
+            <i class="fas fa-laptop-code"></i>
+            <span>Projects</span>
+          </a>
+        </li>
+        <li class="nav-item" [class.active]="isActive('experience')">
+          <a class="nav-link" href="#experience" (click)="scrollToSection('experience', $event)">
+            <i class="fas fa-briefcase"></i>
+            <span>Experience</span>
+          </a>
+        </li>
+        <li class="nav-item nav-item-cta" [class.active]="isActive('contact')">
+          <a class="nav-link nav-link-cta" href="#contact" (click)="scrollToSection('contact', $event)">
+            <i class="fas fa-paper-plane"></i>
+            <span>Contact</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
